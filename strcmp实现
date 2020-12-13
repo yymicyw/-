@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{char a[20],b[20],*p1=a,*p2=b;
+    gets(a);gets(b);
+    int ret=0;
+    while(!(ret=*p1-*p2)&&*p2)
+    {p1++;
+        p2++;
+    }
+    if(ret<0) ret=-1;
+    else if(ret>0) ret=1;
+    printf("%d",ret);
+    return 0;
+}
